@@ -1,1 +1,225 @@
-Coming soon
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quentox</title>
+    <link rel="icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+
+        function toggleFocus(element) {
+            element.classList.toggle("focused");
+            if (element.id != 'software-development') {
+                document.getElementById('software-development').classList.remove("focused")
+            }
+            if (element.id != 'system-integrations') {
+                document.getElementById('system-integrations').classList.remove("focused");
+            }
+            if (element.id != 'managed-services') {
+                document.getElementById('managed-services').classList.remove("focused");
+            }
+        }
+
+        function toggleSelection(element) {
+            element.classList.toggle("link-selected");
+            if (element.id != 'software-development-link') {
+                document.getElementById('software-development-link').classList.remove("link-selected")
+            }
+            if (element.id != 'system-integrations-link') {
+                document.getElementById('system-integrations-link').classList.remove("link-selected");
+            }
+            if (element.id != 'managed-services-link') {
+                document.getElementById('managed-services-link').classList.remove("link-selected");
+            }
+        }
+
+        function selectSection(sectionId) {
+            toggleSelection(document.getElementById(sectionId + '-link'));
+            var section = document.getElementById(sectionId);
+            toggleFocus(section);
+
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .navbar {
+            background-image: url('header.png');
+            position: fixed;
+            width: 100%;
+            height: 67px;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 54px;
+            padding-left: 40px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        ul li {
+            color: #C4C6CC;
+            transition: color 0.3s ease;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #C4C6CC;
+            transition: color 0.3s ease;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        ul li a:hover {
+            color: #297DEE;
+        }
+
+        .link-selected {
+            color: #297DEE;
+        }
+
+        .content-heading-image {
+            display: flex;
+            flex-direction: line;
+            align-items: center;
+            margin-top: 67px;
+            opacity: 85%;
+        }
+
+        .content-panes {
+            display: flex;
+            flex-direction: line;
+            align-items: stretch;
+        }
+
+        .content-pane {
+            background-color: #2C3249;
+            color: #C4C6CC;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            margin-left: 40px;
+            box-sizing: border-box;
+            flex: 0 0 calc(33.33% - 50px);
+            box-sizing: border-box;
+        }
+
+        .focused {
+            box-shadow: 0 0 10px 5px #4d4d4d;
+            transform: scale(1.1);
+        }
+
+        .section-image {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .footer {
+            background-color: #30467D;
+            color: #C4C6CC;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .contact-info {
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+
+        .contact-info a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .rights-reserved {
+            color: #FFFFFF;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href=""><img src="logo-quentox.png" /></a></div>
+        <ul style="--margin-top: -60px">
+            <li><a id="software-development-link" onclick="selectSection('software-development')">Software
+                    Development</a></li>
+            <li><a id="system-integrations-link" onclick="selectSection('system-integrations')">System Integrations</a>
+            </li>
+            <li style="padding-right: 40px;">
+                <a id="managed-services-link" onclick="selectSection('managed-services')">Managed
+                    Services</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content-heading-image">
+        <section id="software">
+            <img src="heading-image.jpg" alt="Software Development Image" class="section-image">
+        </section>
+    </div>
+    <div class="content-panes">
+
+        <section id="software-development" class="content-pane">
+            <h2>Software Development</h2>
+            <p>Our company has vast experience in building robust, business-critical systems and integrating newly
+                developed modules into existing business-critical systems. This includes projects involving payment
+                solutions, secure data exchange solutions, oil and gas pipeline monitoring software, as well as various
+                add-ons and extensions to already deployed ERP systems.</p>
+        </section>
+
+        <section id="system-integrations" class="content-pane">
+            <h2>System Integrations</h2>
+            <p>Nowadays, each business is using a different set of software systems (ERP, CRS, BI/Reporting, others). In
+                most cases, those are from different vendors. Our company has profound experience connecting those types
+                of systems to each other and also linking them to your business partners. Allow us to support you in
+                expanding your market reach and competitiveness.</p>
+        </section>
+
+        <section id="managed-services" class="content-pane">
+            <h2>Managed Services</h2>
+            <p>Our DevOps team is proficient in the technologies of AWS, Azure, and Oracle Cloud Infrastructure (OCI).
+                Engaging the team will eliminate your daily distractions of day-to-day maintenance and technical
+                support. It will enable your staff to concentrate on your business and product development.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="contact-info">
+                <p>Contact us at: +359 893 642219
+                </p>
+            </div>
+            <div class="rights-reserved">
+                <p>All Rights Reserved &copy; 2024 Quentox JSC</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
