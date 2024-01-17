@@ -17,8 +17,10 @@
                 document.getElementById("system-integrations").classList.add("content-pane-mobile");
                 document.getElementById("managed-services").classList.add("content-pane-mobile");
                 document.getElementById("navbar").classList.add("hide-navbar");
+                document.getElementById("logo").classList.add("navbar-mobile");
             } else {
                 document.getElementById("content-panes").classList.add("content-panes-desktop");
+                document.getElementById("logo").classList.add("navbar-desktop");
             }
         });
 
@@ -63,6 +65,15 @@
             display: none;
         }
 
+        .navbar-mobile {
+            text-align: center;
+            width: 100%;
+        }
+
+        .navbar-desktop {
+            padding-left: 40px;
+        }
+
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
@@ -83,7 +94,6 @@
 
         .logo img {
             height: 54px;
-            padding-left: 40px;
         }
 
         ul {
@@ -188,7 +198,7 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo"><a href=""><img src="logo-quentox.png" /></a></div>
+        <div id="logo" class="logo"><a href=""><img src="logo-quentox.png" /></a></div>
         <ul id="navbar">
             <li><a id="software-development-link" onclick="selectSection('software-development')">Software
                     Development</a></li>
