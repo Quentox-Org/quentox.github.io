@@ -9,6 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script type="text/javascript">
 
+        window.addEventListener("load", () => {
+            let isMobile = window.innerWidth < 480;
+            if (isMobile) {
+                document.getElementById("content-panes").classList.add("content-panes-mobile");
+                document.getElementById("software-development").classList.add("content-pane-mobile");
+                document.getElementById("system-integrations").classList.add("content-pane-mobile");
+                document.getElementById("managed-services").classList.add("content-pane-mobile");
+                document.getElementById("navbar").classList.add("hide-navbar");
+            } else {
+                document.getElementById("content-panes").classList.add("content-panes-desktop");
+            }
+        });
+
         function toggleFocus(element) {
             element.classList.toggle("focused");
             if (element.id != 'software-development') {
@@ -46,6 +59,10 @@
         }
     </script>
     <style>
+        .hide-navbar {
+            display: none;
+        }
+
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
@@ -105,7 +122,12 @@
             opacity: 85%;
         }
 
-        .content-panes {
+        .content-panes-mobile {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-panes-desktop {
             display: flex;
             flex-direction: line;
             align-items: stretch;
@@ -120,7 +142,10 @@
             margin-left: 40px;
             box-sizing: border-box;
             flex: 0 0 calc(33.33% - 50px);
-            box-sizing: border-box;
+        }
+
+        .content-pane-mobile {
+            margin-right: 40px;
         }
 
         .focused {
@@ -164,7 +189,7 @@
 
     <nav class="navbar">
         <div class="logo"><a href=""><img src="logo-quentox.png" /></a></div>
-        <ul style="--margin-top: -60px">
+        <ul id="navbar">
             <li><a id="software-development-link" onclick="selectSection('software-development')">Software
                     Development</a></li>
             <li><a id="system-integrations-link" onclick="selectSection('system-integrations')">System Integrations</a>
@@ -181,7 +206,7 @@
             <img src="heading-image.jpg" alt="Software Development Image" class="section-image">
         </section>
     </div>
-    <div class="content-panes">
+    <div id="content-panes">
 
         <section id="software-development" class="content-pane">
             <h2>Software Development</h2>
