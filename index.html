@@ -17,8 +17,10 @@
                 document.getElementById("system-integrations").classList.add("content-pane-mobile");
                 document.getElementById("managed-services").classList.add("content-pane-mobile");
                 document.getElementById("navbar").classList.add("hide-navbar");
+                document.getElementById("nav").classList.add("navbar-background-mobile");
                 document.getElementById("logo").classList.add("navbar-mobile");
             } else {
+                document.getElementById("nav").classList.add("navbar-background-dekstop");
                 document.getElementById("content-panes").classList.add("content-panes-desktop");
                 document.getElementById("logo").classList.add("navbar-desktop");
             }
@@ -80,7 +82,6 @@
         }
 
         .navbar {
-            background-image: url('header.png');
             position: fixed;
             width: 100%;
             height: 67px;
@@ -90,6 +91,14 @@
             align-items: center;
             padding: 0;
             z-index: 1000;
+        }
+
+        .navbar-background-mobile {
+            background-image: linear-gradient(to right, white, #30467D 260%);
+        }
+
+        .navbar-background-dekstop {
+            background-image: linear-gradient(to right, white, #30467D 35%);
         }
 
         .logo img {
@@ -197,7 +206,7 @@
 
 <body>
 
-    <nav class="navbar">
+    <nav id="nav" class="navbar">
         <div id="logo" class="logo"><a href=""><img src="logo-quentox.png" /></a></div>
         <ul id="navbar">
             <li><a id="software-development-link" onclick="selectSection('software-development')">Software
@@ -212,7 +221,7 @@
     </nav>
 
     <div class="content-heading-image">
-        <section id="software">
+        <section id="software" style="width: 100%;">
             <img src="heading-image.jpg" alt="Software Development Image" class="section-image">
         </section>
     </div>
