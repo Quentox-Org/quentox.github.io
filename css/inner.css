@@ -1,0 +1,18 @@
+h1 {
+    color: var(--main-color);
+    font-size: 45px;
+    line-height: 49px;
+    font-weight: 700;
+    text-align: left;
+}
+.nav-cube, .nav {
+    display: none;
+}
+.home {
+    height: auto;
+    min-height: 100vh;
+}
+p {
+    font-size: 16px;
+    line-height: 23px;
+}

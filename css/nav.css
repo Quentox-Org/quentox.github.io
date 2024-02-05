@@ -1,0 +1,115 @@
+.nav {
+    top: 0;
+    width: unset;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    justify-content: end;
+    z-index: 99;
+}
+    .nav .menu {
+        display: flex;
+        gap: 27px;
+        font-size: 15px;
+    }
+    .nav .menu a {
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .nav .menu a:hover,
+    .nav .menu .active {
+        color: var(--red-color);
+    }
+    .nav .social {
+        display: flex;
+        gap: 9px;
+        justify-content: center;
+    }
+/* animated menu icon */
+#toggle {
+    cursor: pointer;
+    display: none;
+    z-index: 998;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#nav-icon {
+    width: 24px;
+    height: 16px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    cursor: pointer;
+}
+#nav-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--main-color);
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: 350ms;
+}
+#nav-icon span:nth-child(1) { top: 0px; }
+#nav-icon span:nth-child(2),#nav-icon span:nth-child(3) { top: 6px; }
+#nav-icon span:nth-child(4) { top: 12px; }
+#nav-icon.open span:nth-child(1) { top: 18px; width: 0%; left: 50%; }
+#nav-icon.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#nav-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+#nav-icon.open span:nth-child(4) { top: 18px; width: 0%; left: 50%; }
+#nav-icon.open span {
+    background: var(--main-color);
+}
+@media screen and (max-width: 100vh) {
+    #toggle {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .questions {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        top: -100vh;
+        transition: 250ms;
+        visibility: hidden;
+        justify-content: center;
+    }
+    .questions.show {
+        top: 0;
+        visibility: visible;
+        padding: 5rem 0;
+        transition: 350ms;
+    }
+    .questions.show .question {
+        padding-left: 0;
+        text-align: center;
+        font-size: 2rem;
+        line-height: 5rem;
+    }
+    .questions.show .question::before {
+        content: none;
+    }
+}
