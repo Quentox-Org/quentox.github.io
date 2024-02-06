@@ -65,7 +65,7 @@
         </div>
     </div>
     <div class="nav-cube">
-        <a id="logo" href="#"><img src="images/logo.svg" width="65" height="65" alt="Logo" /></a>
+        <a id="logo"><img src="images/logo.svg" width="65" height="65" alt="Logo" /></a>
         <div class="questions">
             <div id="link_01" class="question start">Home</div>
             <div id="link_02" class="question sd">Development</div>
@@ -126,33 +126,6 @@
                 href="legal/cookies.html" target="_blank">Cookie Policy</a></p>
         <button id="cookieClose">Accept</button>
     </div>
-    <script>
-        function clearBody() { document.body.removeAttribute("class"); }
-        document.querySelector(".question.start").addEventListener('click', function () {
-            clearBody();
-            document.body.classList.add('start');
-        }, false);
-        document.querySelector(".question.sd").addEventListener('click', function () {
-            clearBody();
-            document.body.classList.add('sd');
-        }, false);
-        document.querySelector(".question.si").addEventListener('click', function () {
-            clearBody();
-            document.body.classList.add('si');
-        }, false);
-        document.querySelector(".question.ms").addEventListener('click', function () {
-            clearBody();
-            document.body.classList.add('ms');
-        }, false);
-        document.querySelector(".question.team").addEventListener('click', function () {
-            clearBody();
-            document.body.classList.add('team');
-        }, false);
-        document.querySelector(".question.contact").addEventListener('click', function () {
-            clearBody();
-            document.body.classList.add('contact');
-        }, false);
-    </script>
     <script src="js/custom.js"></script>
 </body>
 
