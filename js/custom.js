@@ -67,11 +67,6 @@ document.getElementById("link_05").addEventListener('click', function () {
 	document.getElementById('nav-icon').classList.toggle('open');
 }, false);
 
-document.getElementById("link_06").addEventListener('click', function () {
-	document.querySelector('.questions').classList.toggle('show');
-	document.getElementById('nav-icon').classList.toggle('open');
-}, false);
-
 function clearBody() { document.body.removeAttribute("class"); }
 
 document.getElementById("logo").addEventListener('click', function () {
@@ -82,17 +77,13 @@ document.querySelector(".question.start").addEventListener('click', function () 
 	clearBody();
 	document.body.classList.add('start');
 }, false);
+document.querySelector(".question.products").addEventListener('click', function () {
+	clearBody();
+	document.body.classList.add('products');
+}, false);
 document.querySelector(".question.sd").addEventListener('click', function () {
 	clearBody();
 	document.body.classList.add('sd');
-}, false);
-document.querySelector(".question.si").addEventListener('click', function () {
-	clearBody();
-	document.body.classList.add('si');
-}, false);
-document.querySelector(".question.ms").addEventListener('click', function () {
-	clearBody();
-	document.body.classList.add('ms');
 }, false);
 document.querySelector(".question.team").addEventListener('click', function () {
 	clearBody();

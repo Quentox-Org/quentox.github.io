@@ -16,7 +16,7 @@ body.start .pictures {
     background-size: cover;
 }
 
-body.sd .pictures {
+body.products .pictures {
     background-image: url(../images/development.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -30,7 +30,7 @@ body.si .pictures {
     background-size: cover;
 }
 
-body.ms .pictures {
+body.sd .pictures {
     background-image: url(../images/services.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -79,24 +79,20 @@ body.start .cube {
     transform: translateZ(calc(var(--cube-size-half)*-1)) rotateY(0deg);
 }
 
-body.sd .cube {
+body.products .cube {
     transform: translateZ(calc(var(--cube-size-half)*-1)) rotateY(-90.1deg);
 }
 
-body.si .cube {
+body.sd .cube {
     transform: translateZ(calc(var(--cube-size-half)*-1)) rotateY(-180deg);
 }
 
-body.ms .cube {
+body.team .cube {
     transform: translateZ(calc(var(--cube-size-half)*-1)) rotateY(90.1deg);
 }
 
-body.team .cube {
-    transform: translateZ(calc(var(--cube-size-half)*-1)) rotateX(-90.1deg);
-}
-
 body.contact .cube {
-    transform: translateZ(calc(var(--cube-size-half)*-1)) rotateX(90.1deg);
+    transform: translateZ(calc(var(--cube-size-half)*-1)) rotateX(-90.1deg);
 }
 
 .cube_face {
@@ -139,7 +135,7 @@ body.contact .cube {
     transform: rotateY(0deg) translateZ(var(--cube-size-half));
 }
 
-.cube_face.sd {
+.cube_face.products {
     background: linear-gradient(rgba(48, 70, 125, .85) 100%, rgba(48, 70, 125, .85) 100%), url(../images/development.jpg);
     background-size: auto 100vh;
     background-position: center;
@@ -147,20 +143,12 @@ body.contact .cube {
     transform: rotateY(90.1deg) translateZ(var(--cube-size-half));
 }
 
-.cube_face.si {
-    background: linear-gradient(rgba(41, 125, 238, .85) 100%, rgba(41, 125, 238, .85) 100%), url(../images/integration.jpg);
-    background-size: auto 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: rotateY(180deg) translateZ(var(--cube-size-half));
-}
-
-.cube_face.ms {
+.cube_face.sd {
     background: linear-gradient(rgba(48, 70, 125, .85) 100%, rgba(48, 70, 125, .85) 100%), url(../images/services.jpg);
     background-size: auto 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    transform: rotateY(-90.1deg) translateZ(var(--cube-size-half));
+    transform: rotateY(180deg) translateZ(var(--cube-size-half));
 }
 
 .cube_face.team {
@@ -168,7 +156,7 @@ body.contact .cube {
     background-size: auto 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    transform: rotateX(90.1deg) translateZ(var(--cube-size-half));
+    transform: rotateY(-90.1deg) translateZ(var(--cube-size-half));
 }
 
 .cube_face.contact {
@@ -176,7 +164,7 @@ body.contact .cube {
     background-size: auto 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    transform: rotateX(-90.1deg) translateZ(var(--cube-size-half));
+    transform: rotateX(90.1deg) translateZ(var(--cube-size-half));
 }
 
 .nav-cube {
@@ -237,18 +225,18 @@ body.contact .cube {
 }
 
 body.start .questions .question.start,
-body.sd .questions .question.sd,
+body.products .questions .question.products,
 body.si .questions .question.si,
-body.ms .questions .question.ms,
+body.sd .questions .question.sd,
 body.team .questions .question.team,
 body.contact .questions .question.contact {
     color: var(--red-color);
 }
 
 body.start .questions .question.start::before,
-body.sd .questions .question.sd::before,
+body.products .questions .question.products::before,
 body.si .questions .question.si::before,
-body.ms .questions .question.ms::before,
+body.sd .questions .question.sd::before,
 body.team .questions .question.team::before,
 body.contact .questions .question.contact::before {
     background: var(--red-color);
