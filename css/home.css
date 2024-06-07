@@ -83,20 +83,16 @@ body.sd .cube {
     transform: translateZ(calc(var(--cube-size-half)*-1)) rotateY(-90.1deg);
 }
 
-body.si .cube {
+body.ms .cube {
     transform: translateZ(calc(var(--cube-size-half)*-1)) rotateY(-180deg);
 }
 
-body.ms .cube {
+body.team .cube {
     transform: translateZ(calc(var(--cube-size-half)*-1)) rotateY(90.1deg);
 }
 
-body.team .cube {
-    transform: translateZ(calc(var(--cube-size-half)*-1)) rotateX(-90.1deg);
-}
-
 body.contact .cube {
-    transform: translateZ(calc(var(--cube-size-half)*-1)) rotateX(90.1deg);
+    transform: translateZ(calc(var(--cube-size-half)*-1)) rotateX(-90.1deg);
 }
 
 .cube_face {
@@ -147,20 +143,12 @@ body.contact .cube {
     transform: rotateY(90.1deg) translateZ(var(--cube-size-half));
 }
 
-.cube_face.si {
-    background: linear-gradient(rgba(41, 125, 238, .85) 100%, rgba(41, 125, 238, .85) 100%), url(../images/integration.jpg);
-    background-size: auto 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: rotateY(180deg) translateZ(var(--cube-size-half));
-}
-
 .cube_face.ms {
     background: linear-gradient(rgba(48, 70, 125, .85) 100%, rgba(48, 70, 125, .85) 100%), url(../images/services.jpg);
     background-size: auto 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    transform: rotateY(-90.1deg) translateZ(var(--cube-size-half));
+    transform: rotateY(180deg) translateZ(var(--cube-size-half));
 }
 
 .cube_face.team {
@@ -168,7 +156,7 @@ body.contact .cube {
     background-size: auto 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    transform: rotateX(90.1deg) translateZ(var(--cube-size-half));
+    transform: rotateY(-90.1deg) translateZ(var(--cube-size-half));
 }
 
 .cube_face.contact {
@@ -176,7 +164,7 @@ body.contact .cube {
     background-size: auto 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    transform: rotateX(-90.1deg) translateZ(var(--cube-size-half));
+    transform: rotateX(90.1deg) translateZ(var(--cube-size-half));
 }
 
 .nav-cube {
