@@ -77,13 +77,13 @@ document.querySelector(".question.start").addEventListener('click', function () 
 	clearBody();
 	document.body.classList.add('start');
 }, false);
+document.querySelector(".question.products").addEventListener('click', function () {
+	clearBody();
+	document.body.classList.add('products');
+}, false);
 document.querySelector(".question.sd").addEventListener('click', function () {
 	clearBody();
 	document.body.classList.add('sd');
-}, false);
-document.querySelector(".question.ms").addEventListener('click', function () {
-	clearBody();
-	document.body.classList.add('ms');
 }, false);
 document.querySelector(".question.team").addEventListener('click', function () {
 	clearBody();
