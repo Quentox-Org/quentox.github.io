@@ -93,3 +93,6 @@ document.querySelector(".question.contact").addEventListener('click', function (
 	clearBody();
 	document.body.classList.add('contact');
 }, false);
+
+/* Set current year */
+document.getElementById('currentYear').textContent = new Date().getFullYear();
